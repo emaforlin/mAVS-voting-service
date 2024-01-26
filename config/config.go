@@ -30,8 +30,9 @@ func GetConfig() Config {
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath("./")
 
-	if err := viper.ReadConfig(); err != nil {
-		panic(fmt.Errorf("error with config file: ", err))
+	err := viper.ReadInConfig()
+	if err != nil {
+		panic(fmt.Errorf("error with config file: %v", err))
 	}
 
 	return Config{
