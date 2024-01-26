@@ -1,0 +1,12 @@
+app:
+  server:
+    port: 8080
+
+database:
+  host: #localhost
+  port: #5454
+  user: #"mavs-app" 
+  passwd: #password
+  dbname: mavs-app-db
+  sslmode: disable
+  tz: America/Argentina/Cordoba
